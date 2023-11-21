@@ -1,0 +1,352 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+.homePage {
+  position: relative;
+  width: 416px;
+  height: 700px;
+  margin: 50px auto;
+  border-radius: 43px;
+  background: rgba(25, 42, 50, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gameLogo {
+  margin-top: 140px;
+  display: flex;
+  gap: 5px;
+}
+.gameLogo > img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.pickPlayer {
+  background: rgba(31, 53, 64, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 307px;
+  height: 145px;
+  border-radius: 7px;
+  text-align: center;
+  margin-top: 10px;
+}
+.pickPlayer h1 {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 29px;
+  margin-top: 20px;
+}
+.buton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  width: 232px;
+  height: 45px;
+  background: rgba(25, 42, 50, 1);
+  border-radius: 5px;
+}
+.buton > button {
+  width: 127px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+.buton button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: grayscale();
+  filter: brightness(10);
+}
+.buton button:focus {
+  background-color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.buton button:focus img {
+  filter: brightness(0);
+}
+.play {
+  width: 307px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.play > button {
+  background: rgba(242, 178, 55, 1);
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 17px;
+  color: rgba(25, 42, 50, 1);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 18px;
+}
+.play button:nth-child(2) {
+  background: rgba(50, 196, 195, 1);
+}
+
+.invite {
+  width: 255px;
+  height: 33px;
+  margin: 40px auto;
+  border: none;
+  border-radius: 5px;
+  color: rgba(25, 42, 50, 1);
+  background: rgba(242, 178, 55, 1);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 21px;
+}
+.quote {
+  position: absolute;
+  left: 90px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 290px;
+  height: 290px;
+  border-radius: 18px;
+  background: rgba(25, 42, 50, 1);
+}
+.heading {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 34px;
+  color: rgba(49, 196, 190, 1);
+}
+.quoteBox {
+  width: 200px;
+  height: auto;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+.quoteBox::-webkit-scrollbar {
+  display: none;
+}
+.quoteBox p {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 34px;
+  text-align: center;
+  color: rgba(242, 178, 55, 1);
+}
+.img {
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(49, 196, 190, 1);
+}
+.header {
+  width: 290px;
+  height: 40px;
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+.icons {
+  width: 86px;
+  background: rgba(25, 42, 50, 1);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.icons img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+#turn {
+  background: rgba(31, 53, 64, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#turn h1 {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 16px;
+  color: rgba(168, 190, 201, 1);
+}
+#turn img {
+  width: 15px;
+  height: 15px;
+  filter: grayscale();
+}
+#retry {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: rgba(167, 189, 200, 1);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#icons {
+  width: 40px;
+  height: 40px;
+}
+.board {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.gameOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 43px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background: rgba(31, 53, 64, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.square img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+.score {
+  display: flex;
+  justify-content: space-between;
+  width: 290px;
+  background-color: transparent;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.score > div {
+  width: 86px;
+  height: 49px;
+  background: rgba(168, 190, 201, 1);
+  border-radius: 10px;
+}
+.score div p,
+h2 {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 13px;
+  text-align: center;
+  color: rgba(30, 30, 30, 1);
+}
+.score div h2 {
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.popUP {
+  width: 100%;
+  height: 222px;
+  background: rgba(25, 42, 50, 1);
+}
+.popUP h2 {
+  margin-top: 40px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(172, 194, 205, 1);
+}
+.message {
+  width: 73%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.message img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+.message h1 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 36px;
+
+  color: rgba(242, 178, 55, 1);
+}
+.popBut {
+  width: 73%;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+}
+.popBut > button {
+  width: 113px;
+  height: 33px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(49, 196, 190, 1);
+  color: rgba(25, 42, 50, 1);
+}
+#quite {
+  background-color: rgba(247, 179, 54, 1);
+}
+.mainGame {
+  position: relative;
+  height: fit-content;
+}
+.score .blue {
+  background: rgba(49, 196, 190, 1);
+}
+.score .yellow {
+  background-color: rgba(247, 179, 54, 1);
+}
+
+@media screen and (max-width: 420px) {
+  .main-section {
+    width: 100%;
+    height: 100%;
+    background: #192a32;
+  }
+  .homePage {
+    margin: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+  .quote {
+    display: none;
+  }
+}
